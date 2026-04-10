@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book Kaili's beautiful beachfront condo in Corpus Christi, Texas. Entire condo with ocean views, 6 guests, 1 bedroom, 4 beds, 1 bath. Superhost with 4.86 rating.">
+    <title>Kaili's Beachfront Condo · Corpus Christi, TX</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <!-- ═══════════════ NAVIGATION ═══════════════ -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo" id="nav-logo">
+                <svg class="logo-icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 1C7.716 1 1 7.716 1 16c0 8.284 6.716 15 15 15 8.284 0 15-6.716 15-15 0-8.284-6.716-15-15-15zm0 2c7.18 0 13 5.82 13 13s-5.82 13-13 13S3 23.18 3 16 8.82 3 16 3z"/>
+                    <path d="M16 7l-7 14h4l1.5-3h5l1.5 3h4L16 7zm0 4.5L19 17h-6l3-5.5z"/>
+                </svg>
+                <span>AirDND</span>
+            </a>
+            <div class="nav-actions">
+                <button class="nav-btn" id="btn-share">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8"/>
+                        <polyline points="16,6 12,2 8,6"/>
+                        <line x1="12" y1="2" x2="12" y2="15"/>
+                    </svg>
+                    Share
+                </button>
+                <button class="nav-btn" id="btn-save">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+                    </svg>
+                    Save
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ═══════════════ PHOTO GALLERY ═══════════════ -->
+    <section class="photo-gallery" id="photo-gallery">
+        <div class="gallery-grid">
+            <div class="gallery-main" id="gallery-main">
+                <img src="images/condo/livingroom/livingarea.avif" alt="Main living area of the condo with ocean views" loading="eager">
+            </div>
+            <div class="gallery-side" id="gallery-side-1">
+                <img src="images/condo/livingroom/couch.avif" alt="Comfortable couch seating area" loading="lazy">
+            </div>
+            <div class="gallery-side" id="gallery-side-2">
+                <img src="images/condo/livingroom/balcony.avif" alt="Balcony with ocean views" loading="lazy">
+            </div>
+            <div class="gallery-side" id="gallery-side-3">
+                <img src="images/condo/livingroom/balc.avif" alt="Balcony sunset view" loading="lazy">
+            </div>
+            <div class="gallery-side" id="gallery-side-4">
+                <img src="images/condo/livingroom/couchagain.avif" alt="Living room overview" loading="lazy">
+            </div>
+        </div>
+        <button class="gallery-show-all" id="btn-show-all-photos">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="7" height="7"/>
+                <rect x="14" y="3" width="7" height="7"/>
+                <rect x="3" y="14" width="7" height="7"/>
+                <rect x="14" y="14" width="7" height="7"/>
+            </svg>
+            Show all photos
+        </button>
+    </section>
+
+    <!-- ═══════════════ MAIN CONTENT ═══════════════ -->
+    <main class="main-content" id="main-content">
+        <div class="content-wrapper">
+
+            <!-- LEFT: Property Details -->
+            <div class="property-details">
+
+                <!-- Title Section -->
+                <section class="property-header" id="property-header">
+                    <h1 class="property-title">Entire condo in Corpus Christi, Texas</h1>
+                    <p class="property-specs">
+                        <span>6 guests</span>
+                        <span class="spec-dot">·</span>
+                        <span>1 bedroom</span>
+                        <span class="spec-dot">·</span>
+                        <span>4 beds</span>
+                        <span class="spec-dot">·</span>
+                        <span>1 bath</span>
+                    </p>
+                    <div class="property-rating" id="property-rating">
+                        <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <span class="rating-value">4.86</span>
+                        <span class="spec-dot">·</span>
+                        <a href="#reviews" class="reviews-link" id="reviews-link">22 reviews</a>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- Host Section -->
+                <section class="host-section" id="host-section">
+                    <div class="host-card">
+                        <div class="host-avatar-wrapper">
+                            <img src="images/host-kaili.png" alt="Host Kaili" class="host-avatar" id="host-avatar">
+                            <div class="superhost-badge" title="Superhost">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="host-info">
+                            <h2 class="host-name">Hosted by Kaili</h2>
+                            <p class="host-meta">Superhost · 2 years hosting</p>
+                        </div>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- Highlights Section -->
+                <section class="highlights-section" id="highlights-section">
+                    <div class="highlight-item" id="highlight-checkin">
+                        <div class="highlight-icon">
+                            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                                <circle cx="12" cy="16" r="1"/>
+                                <path d="M7 11V7a5 5 0 0110 0v4"/>
+                            </svg>
+                        </div>
+                        <div class="highlight-content">
+                            <h3>Self check-in</h3>
+                            <p>Check yourself in with the smartlock.</p>
+                        </div>
+                    </div>
+                    <div class="highlight-item" id="highlight-views">
+                        <div class="highlight-icon">
+                            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M2 20s3-8 10-8 10 8 10 8"/>
+                                <path d="M2 16s3-6 10-6 10 6 10 6"/>
+                                <circle cx="12" cy="6" r="3"/>
+                            </svg>
+                        </div>
+                        <div class="highlight-content">
+                            <h3>Ocean and beach views</h3>
+                            <p>Guests say the views are lovely.</p>
+                        </div>
+                    </div>
+                    <div class="highlight-item" id="highlight-superhost">
+                        <div class="highlight-icon">
+                            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 15l-3.5 2 .67-3.89L6 10.11l3.92-.57L12 6l2.08 3.54 3.92.57-2.83 2.76.67 3.89z"/>
+                                <circle cx="12" cy="12" r="10"/>
+                            </svg>
+                        </div>
+                        <div class="highlight-content">
+                            <h3>Kaili is a Superhost</h3>
+                            <p>Superhosts are experienced, highly rated Hosts.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- About Section -->
+                <section class="about-section" id="about-section">
+                    <h2 class="section-title">About this place</h2>
+                    <div class="about-text" id="about-text">
+                        <p>Welcome to our stunning beachfront condo in beautiful Corpus Christi! Wake up to breathtaking ocean views from your private balcony and fall asleep to the sound of the waves.</p>
+                        <p>This spacious one-bedroom condo comfortably accommodates up to 6 guests with 4 beds, making it perfect for families or groups of friends. The fully-equipped kitchen allows you to cook your favorite meals, while the open-concept living area provides plenty of room to relax.</p>
+                        <p class="about-text-hidden" id="about-text-extra">Located on the beautiful North Padre Island, you'll be steps away from the beach, local restaurants, and entertainment. Whether you're here for a relaxing getaway or an adventure-filled vacation, this condo has everything you need for an unforgettable stay.</p>
+                    </div>
+                    <button class="show-more-btn" id="btn-show-more-about">
+                        Show more
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                            <polyline points="9,18 15,12 9,6"/>
+                        </svg>
+                    </button>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- Where You'll Sleep -->
+                <section class="sleep-section" id="sleep-section">
+                    <h2 class="section-title">Where you'll sleep</h2>
+                    <div class="sleep-card" id="sleep-card">
+                        <div class="sleep-card-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M2 4v16"/>
+                                <path d="M2 8h18a2 2 0 012 2v10"/>
+                                <path d="M2 17h20"/>
+                                <path d="M6 8v-2a2 2 0 012-2h8a2 2 0 012 2v2"/>
+                            </svg>
+                        </div>
+                        <h3>Bedroom</h3>
+                        <p>1 queen bed, 1 sofa bed, 2 floor mattresses</p>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- What This Place Offers -->
+                <section class="amenities-section" id="amenities-section">
+                    <h2 class="section-title">What this place offers</h2>
+                    <div class="amenities-grid" id="amenities-grid">
+                        <div class="amenity-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M2 20s3-8 10-8 10 8 10 8"/>
+                                <path d="M2 16s3-6 10-6 10 6 10 6"/>
+                            </svg>
+                            <span>Ocean view</span>
+                        </div>
+                        <div class="amenity-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M8 6h13"/><path d="M8 12h13"/><path d="M8 18h13"/><path d="M3 6h.01"/><path d="M3 12h.01"/><path d="M3 18h.01"/>
+                            </svg>
+                            <span>Kitchen</span>
+                        </div>
+                        <div class="amenity-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M5 12.55a11 11 0 0114 0"/><path d="M1.42 9a16 16 0 0121.16 0"/><path d="M8.53 16.11a6 6 0 016.95 0"/>
+                                <circle cx="12" cy="20" r="1"/>
+                            </svg>
+                            <span>Wifi</span>
+                        </div>
+                        <div class="amenity-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="2" y="7" width="20" height="15" rx="2" ry="2"/><polyline points="17,2 12,7 7,2"/>
+                            </svg>
+                            <span>TV</span>
+                        </div>
+                        <div class="amenity-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M3 3h18v18H3z"/><path d="M3 9h18"/><path d="M9 21V9"/>
+                            </svg>
+                            <span>Washer</span>
+                        </div>
+                        <div class="amenity-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/>
+                            </svg>
+                            <span>Free parking</span>
+                        </div>
+                        <div class="amenity-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707"/>
+                                <circle cx="12" cy="12" r="4"/>
+                            </svg>
+                            <span>Beach access</span>
+                        </div>
+                        <div class="amenity-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/>
+                            </svg>
+                            <span>Dryer</span>
+                        </div>
+                        <div class="amenity-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+                            </svg>
+                            <span>Balcony</span>
+                        </div>
+                        <div class="amenity-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            </svg>
+                            <span>Smoke alarm</span>
+                        </div>
+                    </div>
+                    <button class="amenities-show-all-btn" id="btn-show-all-amenities">
+                        Show all amenities
+                    </button>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- Reviews Section -->
+                <section class="reviews-section" id="reviews">
+                    <div class="reviews-header">
+                        <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <h2 class="reviews-score">4.86</h2>
+                        <span class="spec-dot">·</span>
+                        <h2 class="reviews-count">22 reviews</h2>
+                    </div>
+
+                    <div class="reviews-breakdown" id="reviews-breakdown">
+                        <div class="review-category">
+                            <span class="category-label">Cleanliness</span>
+                            <div class="rating-bar"><div class="rating-bar-fill" style="width: 96%"></div></div>
+                            <span class="category-score">4.8</span>
+                        </div>
+                        <div class="review-category">
+                            <span class="category-label">Accuracy</span>
+                            <div class="rating-bar"><div class="rating-bar-fill" style="width: 98%"></div></div>
+                            <span class="category-score">4.9</span>
+                        </div>
+                        <div class="review-category">
+                            <span class="category-label">Check-in</span>
+                            <div class="rating-bar"><div class="rating-bar-fill" style="width: 100%"></div></div>
+                            <span class="category-score">5.0</span>
+                        </div>
+                        <div class="review-category">
+                            <span class="category-label">Communication</span>
+                            <div class="rating-bar"><div class="rating-bar-fill" style="width: 100%"></div></div>
+                            <span class="category-score">5.0</span>
+                        </div>
+                        <div class="review-category">
+                            <span class="category-label">Location</span>
+                            <div class="rating-bar"><div class="rating-bar-fill" style="width: 94%"></div></div>
+                            <span class="category-score">4.7</span>
+                        </div>
+                        <div class="review-category">
+                            <span class="category-label">Value</span>
+                            <div class="rating-bar"><div class="rating-bar-fill" style="width: 96%"></div></div>
+                            <span class="category-score">4.8</span>
+                        </div>
+                    </div>
+
+                    <div class="reviews-list" id="reviews-list">
+                        <!-- Reviews populated by JS -->
+                    </div>
+
+                    <button class="reviews-show-all-btn" id="btn-show-all-reviews">
+                        Show all 22 reviews
+                    </button>
+                </section>
+            </div>
+
+            <!-- RIGHT: Booking Sidebar -->
+            <aside class="booking-sidebar" id="booking-sidebar">
+                <div class="booking-card" id="booking-card">
+                    <div class="booking-price-row">
+                        <div class="booking-price">
+                            <span class="price-amount">$147</span>
+                            <span class="price-period">night</span>
+                        </div>
+                        <div class="booking-rating-mini">
+                            <svg class="star-icon-sm" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                            <span class="rating-sm">4.86</span>
+                            <span class="spec-dot">·</span>
+                            <a href="#reviews" class="reviews-link-sm">22 reviews</a>
+                        </div>
+                    </div>
+
+                    <div class="booking-inputs" id="booking-inputs">
+                        <div class="booking-dates">
+                            <div class="booking-input-group" id="checkin-group">
+                                <label>CHECK-IN</label>
+                                <input type="date" id="checkin-date" placeholder="Add date">
+                            </div>
+                            <div class="booking-input-group" id="checkout-group">
+                                <label>CHECKOUT</label>
+                                <input type="date" id="checkout-date" placeholder="Add date">
+                            </div>
+                        </div>
+                        <div class="booking-input-group guests-group" id="guests-group">
+                            <label>GUESTS</label>
+                            <select id="guest-count">
+                                <option value="1">1 guest</option>
+                                <option value="2" selected>2 guests</option>
+                                <option value="3">3 guests</option>
+                                <option value="4">4 guests</option>
+                                <option value="5">5 guests</option>
+                                <option value="6">6 guests</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button class="booking-reserve-btn" id="btn-reserve">
+                        Reserve
+                    </button>
+                    <p class="booking-note">You won't be charged yet</p>
+
+                    <div class="booking-breakdown" id="booking-breakdown">
+                        <div class="breakdown-row">
+                            <span class="breakdown-label" id="nightly-label">$147 x 5 nights</span>
+                            <span class="breakdown-value" id="nightly-total">$735</span>
+                        </div>
+                        <div class="breakdown-row">
+                            <span class="breakdown-label">Cleaning fee</span>
+                            <span class="breakdown-value">$85</span>
+                        </div>
+                        <div class="breakdown-row">
+                            <span class="breakdown-label">Service fee</span>
+                            <span class="breakdown-value" id="service-fee">$115</span>
+                        </div>
+                        <hr class="breakdown-divider">
+                        <div class="breakdown-row total-row">
+                            <span class="breakdown-label">Total before taxes</span>
+                            <span class="breakdown-value" id="total-price">$935</span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- ═══════════════ FOOTER ═══════════════ -->
+    <footer class="site-footer" id="site-footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <a href="#">Help Center</a>
+                    <a href="#">Safety information</a>
+                    <a href="#">Cancellation options</a>
+                    <a href="#">Report a concern</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Community</h4>
+                    <a href="#">AirDND.org: disaster relief</a>
+                    <a href="#">Combating discrimination</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Hosting</h4>
+                    <a href="#">Try hosting</a>
+                    <a href="#">Explore hosting resources</a>
+                    <a href="#">Visit our community forum</a>
+                </div>
+                <div class="footer-col">
+                    <h4>AirDND</h4>
+                    <a href="#">Newsroom</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Investors</a>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="footer-bottom">
+                <p>&copy; 2026 AirDND, Inc.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy</a>
+                    <span>·</span>
+                    <a href="#">Terms</a>
+                    <span>·</span>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ═══════════════ LIGHTBOX MODAL ═══════════════ -->
+    <div class="lightbox-overlay" id="lightbox-overlay">
+        <button class="lightbox-close" id="lightbox-close">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+        </button>
+        <button class="lightbox-nav lightbox-prev" id="lightbox-prev">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="15,18 9,12 15,6"/>
+            </svg>
+        </button>
+        <div class="lightbox-content" id="lightbox-content">
+            <img id="lightbox-img" src="" alt="Gallery image">
+            <p class="lightbox-counter" id="lightbox-counter">1 / 6</p>
+        </div>
+        <button class="lightbox-nav lightbox-next" id="lightbox-next">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="9,18 15,12 9,6"/>
+            </svg>
+        </button>
+    </div>
+
+    <!-- ═══════════════ MOBILE BOOKING BAR ═══════════════ -->
+    <div class="mobile-booking-bar" id="mobile-booking-bar">
+        <div class="mobile-booking-info">
+            <div class="mobile-price">
+                <span class="price-amount">$147</span>
+                <span class="price-period">night</span>
+            </div>
+            <div class="mobile-rating">
+                <svg class="star-icon-sm" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                <span>4.86</span>
+            </div>
+        </div>
+        <button class="mobile-reserve-btn" id="mobile-btn-reserve">Reserve</button>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
