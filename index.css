@@ -316,3 +316,22 @@ h1, h2, h3 {
   text-align: center;
   color: var(--color-text-muted);
 }
+
+/* ─────────── Desktop (≥768px) ─────────── */
+@media (min-width: 768px) {
+  .hero {
+    min-height: 80vh;
+    align-items: flex-end;
+    padding-bottom: 10vh;
+  }
+
+  .experience {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .site-footer {
+    grid-template-columns: 1fr 1fr;
+    padding-left: clamp(48px, 10vw, 120px);
+    padding-right: clamp(48px, 10vw, 120px);
+  }
+}
