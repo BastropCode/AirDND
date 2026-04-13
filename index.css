@@ -94,3 +94,61 @@ h1, h2, h3 {
   margin: 0;
   opacity: 0.95;
 }
+
+/* ─────────── Opening ─────────── */
+.opening {
+  padding: var(--space-section-y) var(--space-gutter);
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.opening__lede {
+  font-size: clamp(1.125rem, 2vw, 1.375rem);
+  line-height: 1.7;
+  color: var(--color-text);
+  margin: 0;
+}
+
+/* ─────────── Section title (shared) ─────────── */
+.section-title {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  margin-bottom: 1.25rem;
+}
+
+/* ─────────── Experience ─────────── */
+.experience {
+  padding: var(--space-section-y) var(--space-gutter);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-gutter);
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.experience__text p {
+  font-size: 1rem;
+  color: var(--color-text);
+  margin: 0 0 1.5rem 0;
+}
+
+.experience__bullets li {
+  position: relative;
+  padding-left: 1.25rem;
+  margin: 0.5rem 0;
+  color: var(--color-text);
+}
+
+.experience__bullets li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+  font-weight: 500;
+}
+
+.experience__image img {
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-soft);
+}
