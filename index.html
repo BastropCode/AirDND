@@ -113,9 +113,19 @@
     <p class="site-footer__copyright">© 2026 Kaili Cox</p>
   </footer>
 
-  <!-- Toast script — written by the user in Task 9. Placeholder stub for now. -->
   <script>
-    // TODO (Task 9): implement toast behavior for #reserve-button
+    document.getElementById('reserve-button').addEventListener('click', (e) => {
+      e.preventDefault();
+      if (document.querySelector('.toast')) return;
+      const toast = document.body.appendChild(
+        Object.assign(document.createElement('div'), {
+          className: 'toast',
+          textContent: 'Booking link coming soon — check back!',
+        })
+      );
+      requestAnimationFrame(() => toast.classList.add('is-visible'));
+      setTimeout(() => toast.remove(), 3000);
+    });
   </script>
 </body>
 </html>
