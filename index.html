@@ -9,23 +9,70 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="index.css">
+  <meta name="theme-color" content="#F7F5F2" id="meta-theme-color">
+  <script>
+    (function () {
+      var saved = null;
+      try { saved = localStorage.getItem('theme'); } catch { /* storage blocked */ }
+      var theme;
+      if (saved === 'light' || saved === 'dark') {
+        theme = saved;
+      } else {
+        var h = new Date().getHours();
+        theme = (h >= 6 && h < 18) ? 'light' : 'dark';
+      }
+      document.documentElement.dataset.theme = theme;
+      var meta = document.getElementById('meta-theme-color');
+      if (meta) meta.setAttribute('content', theme === 'dark' ? '#14161D' : '#F7F5F2');
+    })();
+  </script>
 </head>
 <body>
+  <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle day and night mode">
+    <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" aria-hidden="true">
+      <circle cx="12" cy="12" r="4" fill="currentColor"/>
+      <g stroke="currentColor" stroke-width="1.75" stroke-linecap="round" fill="none">
+        <line x1="12" y1="2.5" x2="12" y2="5"/>
+        <line x1="12" y1="19" x2="12" y2="21.5"/>
+        <line x1="2.5" y1="12" x2="5" y2="12"/>
+        <line x1="19" y1="12" x2="21.5" y2="12"/>
+        <line x1="4.8" y1="4.8" x2="6.6" y2="6.6"/>
+        <line x1="17.4" y1="17.4" x2="19.2" y2="19.2"/>
+        <line x1="4.8" y1="19.2" x2="6.6" y2="17.4"/>
+        <line x1="17.4" y1="6.6" x2="19.2" y2="4.8"/>
+      </g>
+    </svg>
+    <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M20.5 14.8A8.2 8.2 0 1 1 9.2 3.5a6.6 6.6 0 0 0 11.3 11.3z" fill="currentColor"/>
+    </svg>
+  </button>
+
   <main>
 
     <!-- HERO -->
     <section class="hero">
       <div class="hero__overlay">
-        <h1 class="hero__title">Wake up to the sound of the ocean</h1>
-        <p class="hero__subtitle">Watch the sunrise right from the sand</p>
+        <h1 class="hero__title">
+          <span data-theme-only="dark">Wake up to the sound of the ocean</span>
+          <span data-theme-only="light">Where the coast comes alive</span>
+        </h1>
+        <p class="hero__subtitle">
+          <span data-theme-only="dark">Watch the sunrise right from the sand</span>
+          <span data-theme-only="light">Toes in the sand, salt in the air</span>
+        </p>
       </div>
     </section>
 
     <!-- OPENING -->
     <section class="opening">
-      <p class="opening__lede">
+      <p class="opening__lede" data-theme-only="dark">
         Wake up to the sound of the ocean and watch the sunrise right from the sand.
         This peaceful coastal retreat is designed for slow mornings, long beach days,
+        and unforgettable stays.
+      </p>
+      <p class="opening__lede" data-theme-only="light">
+        Salt in the air, sand between your toes, the endless rhythm of the waves.
+        This coastal retreat is built for long beach days, golden hours,
         and unforgettable stays.
       </p>
     </section>
@@ -47,7 +94,38 @@
         </ul>
       </div>
       <div class="experience__image">
-        <img src="images/condo/livingroom/balc.avif" alt="View from the balcony toward the water" loading="eager">
+        <img src="images/balcony-wicker-chairs-bay-view.jpeg" alt="Wicker chairs on the balcony overlooking the bay" loading="eager">
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="gallery">
+      <h2 class="section-title gallery__title">A look around</h2>
+      <div class="gallery__grid">
+        <figure class="gallery__item gallery__item--wide">
+          <img src="images/living-room-wide-view-balcony-door.jpeg" alt="Open living room with balcony doors and paradise sign" loading="lazy">
+        </figure>
+        <figure class="gallery__item">
+          <img src="images/kitchen-blue-cabinets-bar-stools.jpeg" alt="Kitchen with blue cabinets and bar stools" loading="lazy">
+        </figure>
+        <figure class="gallery__item">
+          <img src="images/bedroom-wide-view-with-tv-and-fan.jpeg" alt="Primary bedroom with seashell bedding" loading="lazy">
+        </figure>
+        <figure class="gallery__item">
+          <img src="images/hallway-bunk-beds-nautical-runner.jpeg" alt="Nautical hallway with built-in bunk beds" loading="lazy">
+        </figure>
+        <figure class="gallery__item">
+          <img src="images/entry-hallway-surfboard-wall-art.jpeg" alt="Entry hallway with surfboard wall art" loading="lazy">
+        </figure>
+        <figure class="gallery__item gallery__item--wide">
+          <img src="images/balcony-view-bay-houses-uss-lexington.jpeg" alt="Balcony view of the bay and USS Lexington" loading="lazy">
+        </figure>
+        <figure class="gallery__item">
+          <img src="images/pool-area-sunset-palm-trees.jpeg" alt="Pool area at sunset with palm trees" loading="lazy">
+        </figure>
+        <figure class="gallery__item">
+          <img src="images/harbor-bridge-lit-up-at-night.jpeg" alt="Harbor bridge lit up at night" loading="lazy">
+        </figure>
       </div>
     </section>
 
@@ -64,7 +142,7 @@
     <section class="funnel">
       <div class="funnel__card">
         <div class="host-card">
-          <img src="images/host-kaili.png" alt="Kaili Cox" class="host-card__avatar">
+          <img src="images/portrait-headshot.jpeg" alt="Kaili Cox" class="host-card__avatar">
           <div class="host-card__text">
             <strong>Hosted by Kaili</strong>
             <span>Bastrop TX Realtor</span>
@@ -125,6 +203,14 @@
       );
       requestAnimationFrame(() => toast.classList.add('is-visible'));
       setTimeout(() => toast.remove(), 3000);
+    });
+
+    document.getElementById('theme-toggle').addEventListener('click', () => {
+      const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+      document.documentElement.dataset.theme = next;
+      try { localStorage.setItem('theme', next); } catch { /* storage blocked */ }
+      const meta = document.getElementById('meta-theme-color');
+      if (meta) meta.setAttribute('content', next === 'dark' ? '#14161D' : '#F7F5F2');
     });
   </script>
 </body>

@@ -22,6 +22,23 @@
     #C9B79C 70%,
     #8FA8B0 100%
   );
+
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  --color-bg: #14161D;
+  --color-surface: #1E2028;
+  --color-text: #E8E4DD;
+  --color-text-muted: #9A9890;
+  --shadow-soft: 0 10px 28px rgba(0, 0, 0, 0.4);
+
+  color-scheme: dark;
+}
+
+[data-theme="dark"] [data-theme-only="light"],
+[data-theme="light"] [data-theme-only="dark"] {
+  display: none;
 }
 
 /* ─────────── Reset ─────────── */
@@ -60,18 +77,27 @@ h1, h2, h3 {
 .hero {
   position: relative;
   min-height: 70vh;
-  background: var(--hero-gradient);
+  background:
+    linear-gradient(180deg, rgba(20,30,50,0.25) 0%, rgba(20,30,50,0.55) 100%),
+    url('images/ocean-waves-crashing-at-sunset.jpeg') center / cover no-repeat,
+    var(--hero-gradient);
   display: flex;
   align-items: flex-end;
   padding: var(--space-section-y) var(--space-gutter);
 }
 
+[data-theme="dark"] .hero {
+  background:
+    linear-gradient(180deg, rgba(0,0,0,0.10) 0%, rgba(0,0,0,0.45) 100%),
+    url('images/lone-palm-tree-beach-dawn.jpeg') center / cover no-repeat,
+    var(--hero-gradient);
+}
+
 .hero::after {
-  /* Subtle dark-to-transparent gradient for text contrast */
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0.25) 100%);
+  background: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.35) 100%);
   pointer-events: none;
 }
 
@@ -153,6 +179,43 @@ h1, h2, h3 {
   box-shadow: var(--shadow-soft);
 }
 
+/* ─────────── Gallery ─────────── */
+.gallery {
+  padding: var(--space-section-y) var(--space-gutter);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery__title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.gallery__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.gallery__item {
+  margin: 0;
+  overflow: hidden;
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-soft);
+  aspect-ratio: 4 / 3;
+}
+
+.gallery__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.gallery__item:hover img {
+  transform: scale(1.03);
+}
+
 /* ─────────── Vibe ─────────── */
 .vibe {
   position: relative;
@@ -161,6 +224,12 @@ h1, h2, h3 {
     linear-gradient(180deg, rgba(247,245,242,0.85), rgba(247,245,242,0.85)),
     var(--hero-gradient);
   text-align: center;
+}
+
+[data-theme="dark"] .vibe {
+  background:
+    linear-gradient(180deg, rgba(20,22,29,0.88), rgba(30,35,48,0.85)),
+    var(--hero-gradient);
 }
 
 .vibe__quote {
@@ -329,11 +398,55 @@ h1, h2, h3 {
     grid-template-columns: 1fr 1fr;
   }
 
+  .gallery__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .gallery__item--wide {
+    grid-column: span 2;
+  }
+
   .site-footer {
     grid-template-columns: 1fr 1fr;
     padding-left: clamp(48px, 10vw, 120px);
     padding-right: clamp(48px, 10vw, 120px);
   }
+}
+
+/* ─────────── Theme toggle ─────────── */
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid rgba(201, 183, 156, 0.35);
+  border-radius: 50%;
+  background: var(--color-surface);
+  color: var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.2s ease, background 0.25s ease, border-color 0.25s ease;
+  z-index: 100;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.06);
+  border-color: var(--color-accent);
+}
+
+.theme-toggle__icon {
+  width: 20px;
+  height: 20px;
+}
+
+[data-theme="dark"] .theme-toggle__icon--moon,
+[data-theme="light"] .theme-toggle__icon--sun {
+  display: none;
 }
 
 /* ─────────── Toast ─────────── */
